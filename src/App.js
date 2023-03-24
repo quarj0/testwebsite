@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './Components/Navbar';
+import Courses from './components/Courses';
+import courseData from "./data/courseData";
+
+
 import './App.css';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredCourses = courseData.filter((course) =>
+    course.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className='App'>
+      <Navbar searchTerm={searchTerm} handleSearch={handleSearch} />
+      <div className='hero'>
+        <h1>Welcome to Our Online Learning Platform</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Choose from a wide selection of courses to help you achieve your goals
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <Courses courses={filteredCourses} />
     </div>
   );
 }
