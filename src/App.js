@@ -1,33 +1,22 @@
-import React, { useState } from 'react';
-import Navbar from './Components/Navbar';
-import Courses from './components/Courses';
-import courseData from "./data/courseData";
-
-
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import NotFound from './components/NotFound';
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const filteredCourses = courseData.filter((course) =>
-    course.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
-    <div className='App'>
-      <Navbar searchTerm={searchTerm} handleSearch={handleSearch} />
-      <div className='hero'>
-        <h1>Welcome to Our Online Learning Platform</h1>
-        <p>
-          Choose from a wide selection of courses to help you achieve your goals
-        </p>
-      </div>
-      <Courses courses={filteredCourses} />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </Routes>
+    </Router>
   );
 }
 
