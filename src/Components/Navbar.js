@@ -1,41 +1,24 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import '../Styles/navbar.css';
-
-const Navbar = () => {
-  const [searchValue, setSearchValue] = useState('');
-
-  const handleSearchInputChange = (event) => {
-    setSearchValue(event.target.value);
-  }
-
-  return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-logo">
-          My Website
-        </Link>
-      </div>
-      <div className="navbar-search">
-        <input 
-          type="text" 
-          placeholder="Search" 
-          value={searchValue} 
-          onChange={handleSearchInputChange} 
-        />
-        <Link to={`/search/${searchValue}`} className="navbar-search-button">
-          <i className="fas fa-search"></i>
-        </Link>
-      </div>
-      <div className="navbar-links">
-        <Link to="/projects" className="navbar-link">Project Ideas</Link>
-        <Link to="/quiz" className="navbar-link">Quiz</Link>
-        <Link to="/contact" className="navbar-link">Contact</Link>
-        <Link to="/about" className="navbar-link">About</Link>
-      </div>
-    </nav>
-  );
-}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Your Brand Name</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 export default Navbar;
