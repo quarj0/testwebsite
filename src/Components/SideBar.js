@@ -2,6 +2,8 @@ import React from "react";
 import { SideBarData } from "../data/courseData";
 import { Link } from "react-router-dom";
 
+import './sidebar.css';
+
 const sidebar = () => {
   return (
     <>
@@ -17,7 +19,7 @@ const sidebar = () => {
               </div>
             );
           })}
-        </div>
+        </div> 
       </section>
     </>
   );

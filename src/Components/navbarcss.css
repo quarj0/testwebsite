@@ -1,0 +1,40 @@
+.bg-black {
+    background-color: black;
+  }
+  
+  .h-20 {
+    height: 20px;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .pl-10 {
+    padding-left: 10px;
+  }
+  
+  .space-x-4 > * + * {
+    margin-left: 1rem;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .text-4x1 {
+    font-size: 4rem;
+  }
+  
+  .text-3x-1 {
+    font-size: 3.1rem;
+  }
+  

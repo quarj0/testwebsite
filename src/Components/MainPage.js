@@ -1,30 +1,30 @@
-import React from 'react';
+import React from "react";
+import Navbar from "./Navbar";
+import SideBar from "./SideBar";
+import NavPage from "./NavPage";
 
-import Navbar from './Navbar';
-import SideBar from './SideBar';
-import NavPage from './NavPage';
-
+import '../styles.css'
 
 function MainPage() {
   return (
     <>
-    <section>
-      <Navbar />
-    </section>
-
-    <section>
-      <div className='grid grid-cols-12'>
-        <div className='col-span-3 bg-black h-screen pl-2'>
-          <SideBar />
+      <section>
+        <nav className="navbar">
+          <Navbar />
+        </nav>
+      </section>
+      <section>
+        <div className="grid grid-cols-12">
+          <div className="col-span-3 sidebar">
+            <SideBar />
+          </div>
+          <div className="col-span-3 navpage">
+            <NavPage />
+          </div>
         </div>
-
-          <div className='col-span-9 bg-green-500 h-screen pl-2'></div>
-      <NavPage />
-      </div>
-    </section>
+      </section>
     </>
   );
 }
 
 export default MainPage;
-

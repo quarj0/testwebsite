@@ -7,6 +7,9 @@ import Java from '../pages/java';
 import CSS from '../pages/css';
 import Git from '../pages/git';
 import HTML from '../pages/html';
+import Reactjs from '../pages/Reactjs.js';
+
+import './navpage.css';
 
 function NavPage() {
   return (
@@ -19,6 +22,7 @@ function NavPage() {
         <Route path='/css' element={<CSS />} />
         <Route path='/html' element={<HTML />} />
         <Route path='/java' element={<Java />} />
+        <Route path='/react' element={<Reactjs />} />
       </Routes>
     </section>
     </>

@@ -31,6 +31,11 @@ export const SideBarData=[
     title: "Python",
     path: "/python",
     icon: <FaIcons.FaPython />
+  },
+  {
+    title: "React",
+    path: "/react",
+    icon: <FaIcons.FaReact />
   }
 ]
 
