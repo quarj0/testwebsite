@@ -1,22 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import NotFound from './components/NotFound';
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import MainPage from './components/MainPage';
+
+import "./App.css"
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route component={NotFound} />
-      </Routes>
-    </Router>
+   <>
+   <Router>
+    <MainPage />
+   </Router>
+   </>
   );
 }
 

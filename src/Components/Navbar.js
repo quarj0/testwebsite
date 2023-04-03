@@ -1,24 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Your Brand Name</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+import React from 'react';
+import {BsBook} from 'react-icons/bs';
+function Navbar() {
+  return (
+   
+     <section>
+      <div className='bg-black h-20 w-full flex items-center pl-10 space-x-4'>
+        <div>
+          <BsBook className='text-white text-4x1' />
+        </div>
+        <div>
+          <p className='text-white text-3x-1'>My Coding</p>
+        </div>
+      </div>
+     </section>
+   
+  );
+}
 
-export default Navbar;
+export default Navbar
